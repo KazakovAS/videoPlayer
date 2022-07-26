@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="./styles/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+</head>
+<body>
+  <div class="player">
+    <video class="player__video" controls width="480" height="270" preload="metadata" poster="">
+      <source src="#.mp4" type="video/mp4">
+      <source src="#.webm" type="video/webm">
+
+      <!-- субтитры -->
+      <track kind="subtitles" src="#.en.vtt" srclang="en" label="English">
+
+      Sorry, your browser doesn't support embedded videos, but you can <a href="#">download it</a>
+    </video>
+
+    <div class="controls player__controls">
+      <button class="controls__play" aria-label="play pause toggle"></button>
+      <progress class="controls__progress-bar" value="0" max="100"></progress>
+      <button class="controls__subtitles" aria-label="show hide subtitles toggle"></button>
+      <button class="controls__mute" aria-label="mute toggle"></button>
+      <input class="controls__volume" type="range" value="100" max="100" aria-label="Громкость">
+      <button class="controls__fullscreen" aria-label="fullscreen toggle"></button>
+
+      <select class="controls__quality" aria-label="Качество" >
+        <option value="auto" selected>auto</option>
+        <option value="1080">1080p</option>
+        <option value="720">720p</option>
+        <option value="480">480p</option>
+        <option value="360">360p</option>
+        <option value="244">244p</option>
+      </select>
+
+      <select class="controls__speed" aria-label="Скорость">
+        <option value="25">x0.25</option>
+        <option value="50">x0.50</option>
+        <option value="75">x0.75</option>
+        <option value="100" selected>x1.00</option>
+        <option value="125">x1.25</option>
+        <option value="150">x1.50</option>
+        <option value="175">x1.75</option>
+        <option value="200">x2.00</option>
+      </select>
+
+      <div class="timer player__timer">
+        <span aria-label="timer__current"></span>
+        <span aria-label="timer__buffered"></span>
+        /
+        <span class="timer__total"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
