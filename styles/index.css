@@ -1,0 +1,15 @@
+@import './page/page.css';
+@import './page/__content/page__content.css';
+
+@import './player/player.css';
+@import './player/__video/player__video.css';
+
+@import './controls/controls.css';
+@import './controls/__progress-bar/controls__progress-bar.css';
+@import './controls/__button/controls__button.css';
+@import './controls/__play/controls__play.css';
+@import './controls/__play/_paused/controls__play_paused.css';
+@import './controls/__mute/controls__mute.css';
+@import './controls/__mute/_muted/controls__mute_muted.css';
+
+@import './time/time.css';

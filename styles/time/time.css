@@ -1,0 +1,7 @@
+.time {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  order: -1;
+}

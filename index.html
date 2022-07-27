@@ -6,54 +6,38 @@
   <link rel="stylesheet" href="./styles/index.css">
   <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
 </head>
-<body>
-  <div class="player">
-    <video class="player__video" controls width="480" height="270" preload="metadata" poster="">
-      <source src="#.mp4" type="video/mp4">
-      <source src="#.webm" type="video/webm">
+<body class="page">
+  <main class="page__content">
+    <div class="player">
+      <video class="player__video" width="480" height="270" preload="metadata" poster="">
+        Sorry, your browser doesn't support embedded videos
+      </video>
 
-      <!-- субтитры -->
-      <track kind="subtitles" src="#.en.vtt" srclang="en" label="English">
+      <div class="controls player__controls">
+        <button class="controls__button controls__play" aria-label="play"></button>
+        <progress class="controls__progress-bar" value="0" max="100"></progress>
+        <button class="controls__button controls__mute controls__play_muted" aria-label="mute"></button>
+        <input class="controls__volume" type="range" value="100" max="100" aria-label="Громкость">
 
-      Sorry, your browser doesn't support embedded videos, but you can <a href="#">download it</a>
-    </video>
+        <div class="time player__time">
+          <span class="time__current">00:00:00</span>
+          /
+          <span class="time__buffered"></span>
+        </div>
 
-    <div class="controls player__controls">
-      <button class="controls__play" aria-label="play pause toggle"></button>
-      <progress class="controls__progress-bar" value="0" max="100"></progress>
-      <button class="controls__subtitles" aria-label="show hide subtitles toggle"></button>
-      <button class="controls__mute" aria-label="mute toggle"></button>
-      <input class="controls__volume" type="range" value="100" max="100" aria-label="Громкость">
-      <button class="controls__fullscreen" aria-label="fullscreen toggle"></button>
-
-      <select class="controls__quality" aria-label="Качество" >
-        <option value="auto" selected>auto</option>
-        <option value="1080">1080p</option>
-        <option value="720">720p</option>
-        <option value="480">480p</option>
-        <option value="360">360p</option>
-        <option value="244">244p</option>
-      </select>
-
-      <select class="controls__speed" aria-label="Скорость">
-        <option value="25">x0.25</option>
-        <option value="50">x0.50</option>
-        <option value="75">x0.75</option>
-        <option value="100" selected>x1.00</option>
-        <option value="125">x1.25</option>
-        <option value="150">x1.50</option>
-        <option value="175">x1.75</option>
-        <option value="200">x2.00</option>
-      </select>
-
-      <div class="timer player__timer">
-        <span aria-label="timer__current"></span>
-        <span aria-label="timer__buffered"></span>
-        /
-        <span class="timer__total"></span>
+        <select class="controls__speed" aria-label="Скорость">
+          <option value="0.25">0.25</option>
+          <option value="0.5">0.5</option>
+          <option value="0.75">0.75</option>
+          <option value="1.0" selected>1.0</option>
+          <option value="1.25">1.25</option>
+          <option value="1.5">1.5</option>
+          <option value="1.75">1.75</option>
+          <option value="2.0">2.0</option>
+        </select>
       </div>
     </div>
-  </div>
+  </main>
 
   <script src="./app.js"></script>
 </body>
